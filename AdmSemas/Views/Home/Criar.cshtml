@@ -1,0 +1,36 @@
+﻿@model AdmSemas.ViewModels.UserCreateViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<form method="post" asp-action="Criar">
+    <div asp-validation-summary="All"></div>
+    <div class="input-group mb-2">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">CPF</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Username" required aria-describedby="basic-addon1" asp-for="Cpf">
+    </div>
+    <div class="input-group mb-2">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Email</span>
+        </div>
+        <input type="email" class="form-control" aria-label="Username" required aria-describedby="basic-addon1" asp-for="Email">
+    </div>
+    <div class="input-group mb-2">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon2">Nome</span>
+        </div>
+        <input type="text" class="form-control" required aria-label="Matricula" aria-describedby="basic-addon2" asp-for="Nome">
+    </div>
+    <div class="input-group mb-2">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Senha</span>
+        </div>
+        <input type="password" class="form-control" required aria-label="Senha" aria-describedby="basic-addon3" asp-for="Senha">
+    </div>
+    <input type="submit" class="btn btn-success" value="Cadastrar">
+    <input type="reset" class="btn btn-outline-danger" value="Resetar">
+</form>
